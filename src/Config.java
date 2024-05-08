@@ -62,7 +62,8 @@ public class Config {
             if(i > longitud/2){
                 d = d + (Integer) ic.getGene(i).getAllele();
             }
-            x = x + (Integer) ic.getGene(i).getAllele();
+            else
+                x = x + (Integer) ic.getGene(i).getAllele();
         }
         int v0 = (int) ic.getGene(0).getAllele();
         int vx = Integer.parseInt(x, 2);

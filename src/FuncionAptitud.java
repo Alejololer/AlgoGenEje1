@@ -19,7 +19,8 @@ public class FuncionAptitud extends FitnessFunction{
             if(i > longitud/2){
                 d = d + (Integer) ic.getGene(i).getAllele();
             }
-            x = x + (Integer) ic.getGene(i).getAllele();
+            else
+                x = x + (Integer) ic.getGene(i).getAllele();
         }
         int v0 = (int) ic.getGene(0).getAllele();
         int vx = Integer.parseInt(x, 2);
@@ -29,7 +30,6 @@ public class FuncionAptitud extends FitnessFunction{
         if(v0 == 0){
             valor= -valor;
         }
-
         int valMaxGen = (int) ( Math.pow(2, (longitud-1)/2)+(1/Math.pow(2, (longitud-1))/2)-Math.pow(2, -1)); //Para el máximo ya no me acordaba esta formula para las cadenas de bits lel
         double valMax = Math.log10(Math.sqrt(Math.pow(valMaxGen, 4)));
         double score = valMax - Math.log10(Math.sqrt(Math.pow(valor, 4)));
