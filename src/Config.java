@@ -67,7 +67,8 @@ public class Config {
         }
         int v0 = (int) ic.getGene(0).getAllele();
         int vx = Integer.parseInt(x, 2);
-        double vd = Integer.parseInt(d, 2);
+        double vd = Integer.parseInt(d, 2) / Math.pow(2, d.length());
+        System.out.println(vd);
         double valor = vx + vd;
 
         if(v0 == 0){

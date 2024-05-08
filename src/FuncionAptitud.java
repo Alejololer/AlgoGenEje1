@@ -24,7 +24,7 @@ public class FuncionAptitud extends FitnessFunction{
         }
         int v0 = (int) ic.getGene(0).getAllele();
         int vx = Integer.parseInt(x, 2);
-        double vd = Integer.parseInt(d, 2);
+        double vd = Integer.parseInt(d, 2) / Math.pow(2, d.length());
         double valor = vx + vd;
 
         if(v0 == 0){
